@@ -1,0 +1,43 @@
+head, html {
+    margin: 40;
+}
+
+body, html {
+    margin: 10;
+    font-family: sans-serif;
+}
+
+.content {
+    text-align: left;
+    margin-left: 100px;
+}
+
+table, td, th {
+    border: 1px solid #aaa;
+    margin: 0 auto;
+    width: 600px;
+}
+
+table {
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th {
+    height: 30px;
+}
+
+td {
+    text-align: center;
+    padding: 5px;
+}
+
+.form {
+    width: 1000px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#content {
+    width: 100%;
+}

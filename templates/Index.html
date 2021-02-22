@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block head %}
+   <h1 style="text-align: center">Recommend Reading Material to Subscribers of Certain Subreddits</h1>
+{% endblock %}
+
+{% block body %}
+<div class="content">
+    <form action="/" method="POST">
+        I really think people who use r/
+        <input type="text" name="subreddit" value="Subreddit" id="subreddit">
+        should read
+        <input type="text" name="title" value="Book Title" id="title">
+        by
+        <input type="text" name="author" value="Author" id="author">
+        <input type="submit" value="Recommend Book">
+    </form>
+    <table>
+        <tr>
+            <th>Subreddit</th>
+            <th>Ranked 1st</th>
+            <th>Ranked 2nd</th>
+            <th>Ranked 3rd</th>
+            <th>Ranked 4th</th>
+            <th>Ranked 5th</th>
+        </tr>
+        {% for x, y in final_dict.items() %}
+            <tr>
+            <td>{{ x }}</td>
+                {% for book_title, vote in y.items() %}
+                    <td>{{ book_title }}, {{ vote }}</td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
+</div>
+{% endblock %}
